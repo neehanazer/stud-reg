@@ -1,9 +1,10 @@
 import React from 'react'
+import NavBar from './NavBar'
 
 const Searchreg = () => {
   return (
     <div>
-        
+        <NavBar/>
       <div>
       <div>
       <div>

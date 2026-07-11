@@ -1,20 +1,23 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
 import './App.css'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import AddReg from './components/AddReg'
-import Deletereg from './components/Deletereg'
 import Searchreg from './components/Searchreg'
+import Deletereg from './components/Deletereg'
+import ViewStudents from './components/ViewStudents'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <AddReg/>
-      <Deletereg/>
-      <Searchreg/>
+     <BrowserRouter>
+    <Routes>
+  <Route index element={<ViewStudents />} />
+  <Route path="add" element={<AddReg />} />
+  <Route path="search" element={<Searchreg />} />
+  <Route path="delete" element={<Deletereg />} />
+  <Route path="view" element={<ViewStudents />} />
+</Routes>
+     </BrowserRouter>
     </>
   )
 }

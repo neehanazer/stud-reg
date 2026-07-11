@@ -1,15 +1,13 @@
-import React from 'react'
-import { Link } from 'react-router';
+import React from "react";
+import { Link } from "react-router-dom";
 
-const NavBar = () => {
+function NavBar() {
   return (
-   
- 
     <div>
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                    <a class="navbar-brand" href="#">
+                    <Link class="navbar-brand" to="#">
                       Campus Placement App
-                    </a>
+                    </Link>
                     <button
                       class="navbar-toggler"
                       type="button"
@@ -24,39 +22,35 @@ const NavBar = () => {
                     <div class="collapse navbar-collapse" id="navbarNav">
                       <ul class="navbar-nav">
                         <li class="nav-item">
-                          <a
+                          <Link
                             class="nav-link active"
                             aria-current="page"
-                            href="AddReg"
+                            to="/add"
                           >
                             Add Registration
-                          </a>
+                          </Link>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="/search">
+                          <Link class="nav-link" to="/search">
                             Search Registration
-                          </a>
+                          </Link>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="/delete">
+                          <Link class="nav-link" to="/delete">
                             Delete Registration
-                          </a>
+                          </Link>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" aria-disabled="true" href="/view">
+                          <Link class="nav-link" aria-disabled="true" to="/view">
                             ViewAll
-                          </a>
+                          </Link>
                         </li>
                       </ul>
                   </div>
                 </nav>
 
     </div>
-
-
   );
 }
 
-
-
-export default NavBar
+export default NavBar;

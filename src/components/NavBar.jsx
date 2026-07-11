@@ -1,19 +1,15 @@
 import React from 'react'
+import { Link } from 'react-router';
 
 const NavBar = () => {
   return (
    
+ 
     <div>
-      <div className="container">
-        <div className="row">
-          <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-            <div className="row">
-              <div className="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                  <div class="container-fluid">
-                    <Link class="navbar-brand" to="#">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                    <a class="navbar-brand" href="#">
                       Campus Placement App
-                    </Link>
+                    </a>
                     <button
                       class="navbar-toggler"
                       type="button"
@@ -28,39 +24,36 @@ const NavBar = () => {
                     <div class="collapse navbar-collapse" id="navbarNav">
                       <ul class="navbar-nav">
                         <li class="nav-item">
-                          <Link
+                          <a
                             class="nav-link active"
                             aria-current="page"
-                            to="AddReg"
+                            href="AddReg"
                           >
                             Add Registration
-                          </Link>
+                          </a>
                         </li>
                         <li class="nav-item">
-                          <Link class="nav-link" to="Searchreg">
+                          <a class="nav-link" href="/search">
                             Search Registration
-                          </Link>
+                          </a>
                         </li>
                         <li class="nav-item">
-                          <Link class="nav-link" to="DeleteReg">
+                          <a class="nav-link" href="/delete">
                             Delete Registration
-                          </Link>
+                          </a>
                         </li>
                         <li class="nav-item">
-                          <Link class="nav-link disabled" aria-disabled="true">
+                          <a class="nav-link" aria-disabled="true" href="/view">
                             ViewAll
-                          </Link>
+                          </a>
                         </li>
                       </ul>
-                    </div>
                   </div>
                 </nav>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
     </div>
+
+
   );
 }
 
